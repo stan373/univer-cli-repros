@@ -13,3 +13,6 @@ Each directory contains a `repro.sh` runnable from an empty directory (prereq: `
 | `issue-1066_insert-rows` | [#1066](https://github.com/dream-num/univer-cli/issues/1066) row-insertion methods are silent no-ops |
 | `issue-1067_active-sheet` | [#1067](https://github.com/dream-num/univer-cli/issues/1067) embedded tab becomes the active sheet |
 | `issue-1069_zoom` | [#1069](https://github.com/dream-num/univer-cli/issues/1069) DocBlock embed ignores document zoom |
+| `issue-1078_doc-flavor` | [#1078](https://github.com/dream-num/univer-cli/issues/1078) inspect labels Modern Docs as [paginated] |
+| `issue-1079_wrapping-enum` | [#1079](https://github.com/dream-num/univer-cli/issues/1079) api.Enum.TextWrappingStyle undefined |
+| `issue-1080_hidden-numfmt` | [#1080](https://github.com/dream-num/univer-cli/issues/1080) number format ";;;" never applied |
