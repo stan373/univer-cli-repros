@@ -16,3 +16,4 @@ Each directory contains a `repro.sh` runnable from an empty directory (prereq: `
 | `issue-1078_doc-flavor` | [#1078](https://github.com/dream-num/univer-cli/issues/1078) inspect labels Modern Docs as [paginated] |
 | `issue-1079_wrapping-enum` | [#1079](https://github.com/dream-num/univer-cli/issues/1079) api.Enum.TextWrappingStyle undefined |
 | `issue-1080_hidden-numfmt` | [#1080](https://github.com/dream-num/univer-cli/issues/1080) number format ";;;" never applied |
+| `issue-1082_chart-remove` | [#1082](https://github.com/dream-num/univer-cli/issues/1082) FDocumentCharts.remove() always rejects |
