@@ -20,3 +20,4 @@ Every `.univer` here is **merged to trunk with no draft worktree**, so it opens 
 | `issue-1079_wrapping-enum` | [#1079](https://github.com/dream-num/univer-cli/issues/1079) api.Enum.TextWrappingStyle undefined |
 | `issue-1080_hidden-numfmt` | [#1080](https://github.com/dream-num/univer-cli/issues/1080) number format ";;;" never applied |
 | `issue-1082_chart-remove` | [#1082](https://github.com/dream-num/univer-cli/issues/1082) FDocumentCharts.remove() always rejects |
+| `issue-1083_table-cell-image` | [#1083](https://github.com/dream-num/univer-cli/issues/1083) image in a Doc table cell is stored but not rendered |
