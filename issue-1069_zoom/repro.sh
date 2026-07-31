@@ -31,3 +31,8 @@ univer execute zoom.univer --worktree "$WT" --unit "$DOC" -e '
 
 echo "--- open the URL, then use the zoom control (bottom right) to go 100% -> 50% ---"
 univer open zoom.univer --worktree "$WT" --unit "$DOC"
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready zoom.univer --worktree "$WT" >/dev/null
+univer worktree merge zoom.univer --worktree "$WT" >/dev/null
+echo "merged — open zoom.univer in the viewer"

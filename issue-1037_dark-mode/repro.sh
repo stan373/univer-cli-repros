@@ -21,3 +21,8 @@ strings dark.univer | grep -icE 'darkmode|dark_mode|"theme"' || true
 echo "--- STEP 3  open the viewer and look ---"
 univer open dark.univer --worktree "$WT" --unit "$U"
 echo "The unit still renders with the light theme."
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready dark.univer --worktree "$WT" >/dev/null
+univer worktree merge dark.univer --worktree "$WT" >/dev/null
+echo "merged — open dark.univer in the viewer"

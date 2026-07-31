@@ -30,3 +30,8 @@ echo "--- for contrast, a brand new sheet created with an explicit row count ---
 univer execute rows.univer --worktree "$WT" --unit "$U" -e '
   const s = workbook.create("Wide", 500, 12);
   return "create(\"Wide\", 500, 12) -> " + s.getMaxRows() + " rows";'
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready rows.univer --worktree "$WT" >/dev/null
+univer worktree merge rows.univer --worktree "$WT" >/dev/null
+echo "merged — open rows.univer in the viewer"

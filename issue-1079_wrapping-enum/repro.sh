@@ -9,3 +9,8 @@ DOC=$(univer unit add enum.univer --worktree "$WT" --type doc --name T --json | 
 univer execute enum.univer --worktree "$WT" --unit "$DOC" -e "
   return ['TextWrappingStyle','ImageSourceType','DocsImageWrappingStyle','DocsShapeWrappingStyle']
     .map(n => n + '=' + (api.Enum[n] === undefined ? 'undefined' : 'ok')).join('  ');"
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready enum.univer --worktree "$WT" >/dev/null
+univer worktree merge enum.univer --worktree "$WT" >/dev/null
+echo "merged — open enum.univer in the viewer"

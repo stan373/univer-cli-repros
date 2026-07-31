@@ -12,3 +12,8 @@ univer execute numfmt.univer --worktree "$WT" --unit "$SHEET" -e '
   const t = (fmt, v) => { const r = sh.getRange("A1"); r.setValue(v); r.setNumberFormat(fmt);
     return fmt + " -> [" + r.getDisplayValue() + "]  (stored: " + r.getNumberFormat() + ")"; };
   return [t("$#,##0", 233628), t("0.0%", 0.411), t(";;;", 233628), t("\"\";;;", 233628)].join("\n");'
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready numfmt.univer --worktree "$WT" >/dev/null
+univer worktree merge numfmt.univer --worktree "$WT" >/dev/null
+echo "merged — open numfmt.univer in the viewer"

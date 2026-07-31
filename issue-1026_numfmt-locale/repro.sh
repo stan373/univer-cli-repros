@@ -19,3 +19,8 @@ echo "--- STEP 2  fresh session: read the same cell again (no setNumfmtLocal) --
 univer execute numfmt.univer --worktree "$WT" --unit "$U" -e '
   return "fresh-session A1 = " + workbook.getActiveSheet().getRange("A1").getDisplayValue();
 '
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready numfmt.univer --worktree "$WT" >/dev/null
+univer worktree merge numfmt.univer --worktree "$WT" >/dev/null
+echo "merged — open numfmt.univer in the viewer"

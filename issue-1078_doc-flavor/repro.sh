@@ -14,3 +14,8 @@ univer execute flavor.univer --worktree "$WT" --unit "$DOC" -e "
 
 echo "--- what inspect reports ---"
 univer inspect document flavor.univer --unit "$DOC" --worktree "$WT" | head -1
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready flavor.univer --worktree "$WT" >/dev/null
+univer worktree merge flavor.univer --worktree "$WT" >/dev/null
+echo "merged — open flavor.univer in the viewer"

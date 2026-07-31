@@ -3,6 +3,9 @@
 Clean-room reproductions for issues filed against [dream-num/univer-cli](https://github.com/dream-num/univer-cli).
 Each directory contains a `repro.sh` runnable from an empty directory (prereq: `npm i -g univer-cli`) and, where useful, the resulting `.univer` file.
 
+
+Every `.univer` here is **merged to trunk with no draft worktree**, so it opens directly in the viewer without a "Locked" banner. Each `repro.sh` regenerates its file from scratch and merges at the end.
+
 | Directory | Issue |
 | --- | --- |
 | `issue-1025_cross-unit-formula` | [#1025](https://github.com/dream-num/univer-cli/issues/1025) cross-unit Formula Shape returns null |

@@ -48,3 +48,8 @@ univer execute ab.univer --worktree "$WT" --unit "$SHEET" -e '
 
 echo "--- open and look: the Base grid shows its rows; the Sheet grid opens scrolled past its data ---"
 univer open ab.univer --worktree "$WT" --unit "$DOC"
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready ab.univer --worktree "$WT" >/dev/null
+univer worktree merge ab.univer --worktree "$WT" >/dev/null
+echo "merged — open ab.univer in the viewer"

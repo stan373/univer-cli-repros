@@ -24,3 +24,8 @@ univer execute chartremove.univer --worktree "$WT" --unit "$DOC" -e '
   catch (e) { out.push("remove(builder) REJECTED: " + e.message); }
   out.push("final count=" + d.charts.list().length);
   return out.join(" | ");'
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready chartremove.univer --worktree "$WT" >/dev/null
+univer worktree merge chartremove.univer --worktree "$WT" >/dev/null
+echo "merged — open chartremove.univer in the viewer"

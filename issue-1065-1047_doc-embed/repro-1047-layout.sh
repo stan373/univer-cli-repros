@@ -43,3 +43,8 @@ univer inspect document docblock.univer --unit "$DOC" --worktree "$WT" --bbox | 
 
 echo "--- open it and look: the sheet paints on top of the paragraphs ---"
 univer open docblock.univer --worktree "$WT" --unit "$DOC"
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready docblock.univer --worktree "$WT" >/dev/null
+univer worktree merge docblock.univer --worktree "$WT" >/dev/null
+echo "merged — open docblock.univer in the viewer"

@@ -37,3 +37,8 @@ univer execute board.univer --worktree "$WT" --unit "$BD" -e '
 
 echo "--- open and compare ---"
 univer open board.univer --worktree "$WT" --unit "$BD"
+
+# leave the file merged so it opens without a "Locked" banner
+univer worktree ready board.univer --worktree "$WT" >/dev/null
+univer worktree merge board.univer --worktree "$WT" >/dev/null
+echo "merged — open board.univer in the viewer"
